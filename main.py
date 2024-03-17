@@ -224,6 +224,7 @@ def handle_synthesize_button(message):
     сохраняет его как аудиофайл и отправляет пользователю.
     """
     markup_actions = types.ReplyKeyboardRemove()
+    bot.send_message(message.chat.id, "Ожидайте")
     bot.send_message(message.chat.id, "Синтезирование выполняется...", reply_markup=markup_actions)
 
     user_data = user_status[message.chat.id]
